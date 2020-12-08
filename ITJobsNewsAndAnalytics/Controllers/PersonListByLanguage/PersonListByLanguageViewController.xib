@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonListByLanguageViewController" customModule="ITJobsNewsAndAnalytics" customModuleProvider="target">
+            <connections>
+                <outlet property="maxButton" destination="qcl-QD-TNG" id="Yz3-uQ-sc8"/>
+                <outlet property="midButton" destination="N8l-Rf-meO" id="Msf-5l-T9X"/>
+                <outlet property="minButton" destination="eoM-tQ-ba0" id="thL-O7-5Hv"/>
+                <outlet property="tableView" destination="q7t-bg-Pyp" id="oBN-Qm-mRf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f05-6P-acQ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sp-wa-KrY">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-QD-TNG">
+                                    <rect key="frame" x="10" y="1" width="90" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="90" id="DmT-nT-43h"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="maxAction:" destination="-1" eventType="touchUpInside" id="Xkd-kU-FqB"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="З максимальною зарплатою" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwk-f5-pwf">
+                                    <rect key="frame" x="10" y="1" width="90" height="38"/>
+                                    <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="10"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8l-Rf-meO">
+                                    <rect key="frame" x="110" y="1" width="80" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="CgK-JQ-GIF"/>
+                                        <constraint firstAttribute="width" constant="80" id="JGv-ta-Phq"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="midAction:" destination="-1" eventType="touchUpInside" id="9Io-Ud-nZo"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="З середньою зарплатою" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WL-QG-SaH">
+                                    <rect key="frame" x="110" y="1" width="80" height="38"/>
+                                    <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoM-tQ-ba0">
+                                    <rect key="frame" x="200" y="1" width="80" height="38"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="80" id="mZn-L1-J7z"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="uET-pH-d3C"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="minAction:" destination="-1" eventType="touchUpInside" id="H0V-9Z-RzW"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="З мінімальною зарплатою" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxp-xp-AbO">
+                                    <rect key="frame" x="200" y="1" width="80" height="38"/>
+                                    <fontDescription key="fontDescription" name="Futura-MediumItalic" family="Futura" pointSize="11"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ye-C1-GsS">
+                                    <rect key="frame" x="344" y="0.0" width="70" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="70" id="hr5-N7-WrL"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                    <state key="normal" title="Закрити">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="closeAction:" destination="-1" eventType="touchUpInside" id="QUJ-Jb-onC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="0Ye-C1-GsS" secondAttribute="bottom" id="0mf-sA-bro"/>
+                                <constraint firstItem="4WL-QG-SaH" firstAttribute="top" secondItem="N8l-Rf-meO" secondAttribute="top" id="3ue-8C-wDq"/>
+                                <constraint firstItem="N8l-Rf-meO" firstAttribute="leading" secondItem="qcl-QD-TNG" secondAttribute="trailing" constant="10" id="6NC-wP-jJE"/>
+                                <constraint firstItem="4WL-QG-SaH" firstAttribute="bottom" secondItem="N8l-Rf-meO" secondAttribute="bottom" id="76s-nM-hdm"/>
+                                <constraint firstAttribute="height" constant="40" id="Dg6-3A-rfA"/>
+                                <constraint firstAttribute="bottom" secondItem="eoM-tQ-ba0" secondAttribute="bottom" constant="1" id="EO8-2e-CeQ"/>
+                                <constraint firstItem="Uwk-f5-pwf" firstAttribute="top" secondItem="qcl-QD-TNG" secondAttribute="top" id="Fnz-Ve-CMd"/>
+                                <constraint firstAttribute="bottom" secondItem="N8l-Rf-meO" secondAttribute="bottom" constant="1" id="GEY-Op-YHd"/>
+                                <constraint firstItem="qcl-QD-TNG" firstAttribute="top" secondItem="3Sp-wa-KrY" secondAttribute="top" constant="1" id="GQx-xf-IUr"/>
+                                <constraint firstItem="4WL-QG-SaH" firstAttribute="leading" secondItem="N8l-Rf-meO" secondAttribute="leading" id="Mpi-wG-xb8"/>
+                                <constraint firstItem="Uwk-f5-pwf" firstAttribute="leading" secondItem="qcl-QD-TNG" secondAttribute="leading" id="RuW-7o-YKu"/>
+                                <constraint firstItem="eoM-tQ-ba0" firstAttribute="top" secondItem="3Sp-wa-KrY" secondAttribute="top" constant="1" id="VbP-dw-oBH"/>
+                                <constraint firstItem="bxp-xp-AbO" firstAttribute="leading" secondItem="eoM-tQ-ba0" secondAttribute="leading" id="XNY-Q8-wfd"/>
+                                <constraint firstItem="Uwk-f5-pwf" firstAttribute="bottom" secondItem="qcl-QD-TNG" secondAttribute="bottom" id="ac7-zs-FR8"/>
+                                <constraint firstItem="Uwk-f5-pwf" firstAttribute="trailing" secondItem="qcl-QD-TNG" secondAttribute="trailing" id="c7Q-Oq-hgt"/>
+                                <constraint firstItem="4WL-QG-SaH" firstAttribute="trailing" secondItem="N8l-Rf-meO" secondAttribute="trailing" id="eDM-2t-LMo"/>
+                                <constraint firstItem="qcl-QD-TNG" firstAttribute="leading" secondItem="3Sp-wa-KrY" secondAttribute="leading" constant="10" id="ewi-T1-o3O"/>
+                                <constraint firstItem="eoM-tQ-ba0" firstAttribute="leading" secondItem="N8l-Rf-meO" secondAttribute="trailing" constant="10" id="fXg-uZ-TSO"/>
+                                <constraint firstItem="0Ye-C1-GsS" firstAttribute="top" secondItem="3Sp-wa-KrY" secondAttribute="top" id="fvW-4H-TfC"/>
+                                <constraint firstItem="bxp-xp-AbO" firstAttribute="trailing" secondItem="eoM-tQ-ba0" secondAttribute="trailing" id="jkl-R9-HCG"/>
+                                <constraint firstItem="N8l-Rf-meO" firstAttribute="top" secondItem="3Sp-wa-KrY" secondAttribute="top" constant="1" id="nFP-lv-Cdp"/>
+                                <constraint firstItem="bxp-xp-AbO" firstAttribute="bottom" secondItem="eoM-tQ-ba0" secondAttribute="bottom" id="qy3-Xf-ee6"/>
+                                <constraint firstItem="bxp-xp-AbO" firstAttribute="top" secondItem="eoM-tQ-ba0" secondAttribute="top" id="r6C-xC-GSC"/>
+                                <constraint firstAttribute="trailing" secondItem="0Ye-C1-GsS" secondAttribute="trailing" id="vJs-ez-8Pd"/>
+                                <constraint firstAttribute="bottom" secondItem="qcl-QD-TNG" secondAttribute="bottom" constant="1" id="ynv-qC-4HY"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q7t-bg-Pyp">
+                            <rect key="frame" x="0.0" y="50" width="414" height="768"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3Sp-wa-KrY" firstAttribute="leading" secondItem="f05-6P-acQ" secondAttribute="leading" id="1hf-5e-JzY"/>
+                        <constraint firstItem="q7t-bg-Pyp" firstAttribute="leading" secondItem="f05-6P-acQ" secondAttribute="leading" id="H1e-S9-5Yz"/>
+                        <constraint firstAttribute="trailing" secondItem="3Sp-wa-KrY" secondAttribute="trailing" id="VUA-9g-gqm"/>
+                        <constraint firstItem="3Sp-wa-KrY" firstAttribute="top" secondItem="f05-6P-acQ" secondAttribute="top" id="VYW-fU-Iwv"/>
+                        <constraint firstAttribute="bottom" secondItem="q7t-bg-Pyp" secondAttribute="bottom" id="gjn-H1-985"/>
+                        <constraint firstAttribute="trailing" secondItem="q7t-bg-Pyp" secondAttribute="trailing" id="iqZ-Ky-YIu"/>
+                        <constraint firstItem="q7t-bg-Pyp" firstAttribute="top" secondItem="3Sp-wa-KrY" secondAttribute="bottom" constant="10" id="xe3-9z-1Gm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f05-6P-acQ" secondAttribute="trailing" id="fJx-de-Y56"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="f05-6P-acQ" secondAttribute="bottom" id="mNO-DH-I25"/>
+                <constraint firstItem="f05-6P-acQ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pUx-Fl-xeC"/>
+                <constraint firstItem="f05-6P-acQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tyc-Su-kCr"/>
+            </constraints>
+            <point key="canvasLocation" x="7" y="46"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
